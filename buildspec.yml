@@ -21,7 +21,7 @@ phases:
   post_build:
     commands:
       - docker push $ECR_REPO:$IMAGE_TAG
-      - printf '[{"name":"jaisoncourse",
+      - printf '[{"name":"app-2048-jaison",
           "imageUri":"%s"}]' \
           $ECR_REPO:$IMAGE_TAG > imagedefinitions.json
  
