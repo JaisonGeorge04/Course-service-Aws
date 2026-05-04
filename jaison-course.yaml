@@ -42,12 +42,14 @@ metadata:
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/group.name: student-app
+    alb.ingress.kubernetes.io/health-check-path: /health
 spec:
   ingressClassName: alb
   rules:
     - http:
         paths:
-        - path: /
+        - path: /jaison-student
           pathType: Prefix
           backend:
             service:
